@@ -1,24 +1,75 @@
 ---
-layout: post
-title: "Introduction to SQL Injection"
+title: "Introduction to Web Vulnerabilities"
 date: 2026-01-22
 categories: [web-development]
-tags: [sql-injection, web-security]
+tags: [SQL injection, security]
+layout: post
 ---
 
-## Introduction
+Web applications are widely used today, but they are often vulnerable if proper security measures are not implemented. Understanding common web vulnerabilities is crucial for building secure applications.
 
-SQL Injection (SQLi) is one of the most common and dangerous web vulnerabilities. It occurs when an attacker is able to manipulate a web application’s SQL query by injecting malicious SQL code through user input. If not properly handled, SQL injection can allow attackers to view, modify, or delete database data, bypass authentication, and even take full control of the system.
+## SQL Injection
 
-Understanding SQL injection is essential for developers to build secure web applications.
+SQL Injection occurs when an attacker manipulates database queries by inserting malicious SQL through input fields.
 
----
-
-## What is SQL Injection?
-
-SQL Injection is a vulnerability that arises when user input is directly included in SQL queries without proper validation or sanitization. Attackers exploit this weakness to alter the intended SQL command executed by the database.
-
-### Example of a Vulnerable Query
+### Example
 
 ```sql
-SELECT * FROM users WHERE username = '$username' AND password = '$password';
+SELECT * FROM users
+WHERE username = 'input'
+AND password = 'input';
+
+---
+
+### **Post 2 — XSS**
+
+**File:** `_posts/2026-01-23-cross-site-scripting.md`
+
+```markdown
+---
+title: "Introduction to Cross-Site Scripting (XSS)"
+date: 2026-01-23
+categories: [web-development]
+tags: [XSS, security]
+layout: post
+---
+
+Cross-Site Scripting (XSS) is a common web vulnerability where attackers inject malicious scripts into web pages that other users view. XSS can steal sensitive data, hijack user sessions, or manipulate website content.
+
+## Types of XSS
+
+1. **Stored XSS**  
+   Malicious scripts are stored on the server (e.g., in a database) and executed whenever users view the affected page.
+
+2. **Reflected XSS**  
+   Scripts are sent via URLs or form inputs and immediately reflected back by the server.  
+
+3. **DOM-Based XSS**  
+   Scripts manipulate the Document Object Model (DOM) on the client side without involving the server.
+
+## Example
+
+If a comment form does not sanitize input:
+
+```html
+<script>alert('XSS attack');</script>
+
+---
+
+###  Key Changes for Chirpy Compatibility
+
+1. `layout: post` added → ensures Chirpy renders it correctly.  
+2. `categories` are **lowercase with hyphens** → needed for category pages.  
+3. `tags` are lowercase → needed for tag pages.  
+4. Properly closed code blocks.  
+5. Markdown headings are consistent.  
+
+---
+
+###  Steps to Make Them Show
+
+1. Copy these two files into your `_posts` folder.  
+2. Run locally (optional but recommended):
+
+```bash
+bundle exec jekyll serve
