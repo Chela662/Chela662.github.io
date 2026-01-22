@@ -1,34 +1,23 @@
 ---
+layout: post
 title: "Introduction to Web Vulnerabilities"
 date: 2026-01-22
-categories: [Web development]
-tags: [SQL injection]
-layout: post
+categories: [web-development]
+tags: [sql-injection]
+---
+## Introduction
+
+SQL Injection (SQLi) is one of the most common and dangerous web vulnerabilities. It occurs when an attacker is able to manipulate a web application’s SQL query by injecting malicious SQL code through user input. If not properly handled, SQL injection can allow attackers to view, modify, or delete database data, bypass authentication, and even take full control of the system.
+
+Understanding SQL injection is essential for developers to build secure web applications.
+
 ---
 
-Web applications are widely used today, but many are vulnerable if proper security measures are not applied. Understanding web vulnerabilities is crucial for building secure applications and protecting users’ data.
+## What is SQL Injection?
 
-## What are Web Vulnerabilities?
+SQL Injection is a vulnerability that arises when user input is directly included in SQL queries without proper validation or sanitization. Attackers exploit this weakness to alter the intended SQL command executed by the database.
 
-A **web vulnerability** is a weakness in a website or web application that can be exploited by attackers to perform unauthorized actions, access sensitive data, or disrupt services. Common examples include:
-
-- SQL Injection  
-- Cross-Site Scripting (XSS)  
-- Cross-Site Request Forgery (CSRF)  
-- Insecure authentication  
-- Security misconfigurations  
-
-In this post, we will focus on **SQL Injection**, one of the most critical vulnerabilities.
-
-## SQL Injection
-
-SQL Injection occurs when an attacker manipulates a website’s database query by inserting malicious SQL code into input fields. This can allow attackers to bypass authentication, read sensitive information, or modify/delete data.
-
-### Example
-
-Imagine a login system with this SQL query:
+### Example of a Vulnerable Query
 
 ```sql
-SELECT * FROM users
-WHERE username = 'input'
-AND password = 'input';
+SELECT * FROM users WHERE username = '$username' AND password = '$password';
