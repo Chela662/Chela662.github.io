@@ -1,23 +1,131 @@
+############################################
+# _config.yml
+############################################
+title: Web Security Blog
+description: Learning Web Vulnerabilities
+theme: minima
+permalink: /:categories/:title/
+markdown: kramdown
+
+############################################
+# _layouts/default.html
+############################################
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+
+<nav>
+  <a href="/">Home</a> |
+  <a href="/categories.html">Categories</a> |
+  <a href="/tags.html">Tags</a>
+</nav>
+<hr>
+
+{{ content }}
+
+</body>
+</html>
+
+############################################
+# _layouts/post.html
+############################################
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
+
+<p>
+Category: {{ page.categories }} |
+Tags: {{ page.tags | join: ", " }}
+</p>
+
+<hr>
+{{ content }}
+
+############################################
+# index.html  (HOME)
+############################################
+---
+layout: default
+title: Home
+---
+
+<h1>Latest Posts</h1>
+
+<ul>
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a><br>
+    <small>
+      Category: {{ post.categories }} |
+      Tags: {{ post.tags | join: ", " }}
+    </small>
+  </li>
+{% endfor %}
+</ul>
+
+############################################
+# categories.html
+############################################
+---
+layout: default
+title: Categories
+---
+
+<h1>Categories</h1>
+
+{% for category in site.categories %}
+  <h2>{{ category[0] }}</h2>
+  <ul>
+    {% for post in category[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+############################################
+# tags.html
+############################################
+---
+layout: default
+title: Tags
+---
+
+<h1>Tags</h1>
+
+{% for tag in site.tags %}
+  <h2>{{ tag[0] }}</h2>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+############################################
+# _posts/2026-01-22-introduction-to-sql-injection.md
+############################################
 ---
 layout: post
-title: "Introduction to Web Vulnerabilities"
+title: "Introduction to SQL Injection"
 date: 2026-01-22
-categories: [web-development]
-tags: [sql-injection]
+categories: web-development
+tags:
+  - sql-injection
+  - web-security
 ---
+
 ## Introduction
 
-SQL Injection (SQLi) is one of the most common and dangerous web vulnerabilities. It occurs when an attacker is able to manipulate a web application’s SQL query by injecting malicious SQL code through user input. If not properly handled, SQL injection can allow attackers to view, modify, or delete database data, bypass authentication, and even take full control of the system.
+SQL Injection (SQLi) is a critical web vulnerability that allows attackers to interfere with database queries by injecting malicious SQL code through user input.
 
-Understanding SQL injection is essential for developers to build secure web applications.
-
----
-
-## What is SQL Injection?
-
-SQL Injection is a vulnerability that arises when user input is directly included in SQL queries without proper validation or sanitization. Attackers exploit this weakness to alter the intended SQL command executed by the database.
-
-### Example of a Vulnerable Query
+## Vulnerable Example
 
 ```sql
 SELECT * FROM users WHERE username = '$username' AND password = '$password';
