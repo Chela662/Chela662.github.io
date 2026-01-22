@@ -4,24 +4,19 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi, I'm **Cynthia Kiptoo**, a passionate web developer with a growing interest in
-data analysis, artificial intelligence, and software development.
+Hi, I'm **Cynthia Kiptoo**, a web developer, data analyst, and AI enthusiast. I enjoy building websites, analyzing data, and exploring new technologies.
 
 ### What I Do
-- Build responsive and modern websites
-- Create user-friendly and intuitive interfaces
-- Turn UI/UX designs into clean, functional code
-- Develop frontend applications using **React**
+- Build responsive websites with HTML, CSS, and JavaScript
+- Develop user-friendly interfaces with React
+- Analyze data to uncover insights
+- Apply AI and software development in practical projects
 
-### Skills & Technologies
-- HTML, CSS, JavaScript
-- React
+### Skills
+- HTML, CSS, JavaScript, React
 - Git & GitHub
-- Basic Data Analysis
+- Data Analysis & AI fundamentals
 - Problem-solving and debugging
 
 ### My Goal
-I aim to continuously improve my technical skills, contribute to meaningful
-projects, and grow as a developer in the tech industry.
-
-Feel free to explore my projects or connect with me through my social links.
+I aim to create meaningful projects, improve my skills continuously, and contribute to the tech community.
