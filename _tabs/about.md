@@ -1,8 +1,11 @@
 ---
-# the default layout is 'page'
+Title: About
 icon: fas fa-info-circle
 order: 4
 ---
+Hi. I'm Cynthia - a web developer
+- passionate about building awesome websites
+- create user-friendly interfaces
+- turn designs into code
+- framework: React
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
