@@ -24,7 +24,7 @@ Initial dataset size:
 
 ---
 
-## 🧹 Data Cleaning Process
+##  Data Cleaning Process
 
 ### 1. Data Exploration
 - Checked dataset shape, data types, and structure
@@ -69,5 +69,5 @@ Final dataset exported successfully and saved for further analysis or visualizat
 
 ---
 
-## 🔗 Project Link
+##  Project Link
  [View on Kaggle](kaggle kernels pull k41522476/cynthia-kiptoo-netflix-data-wrangling)
