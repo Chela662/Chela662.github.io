@@ -6,46 +6,36 @@ tags: [python, pandas, kaggle, data-wrangling]
 ---
 
 ##  Project Overview
-This project focuses on cleaning and preparing the Netflix dataset from Kaggle. The goal was to improve data quality through exploration, handling missing values, feature transformation, and exporting a clean dataset for further analysis.
+This project focuses on cleaning and preparing the Netflix dataset from Kaggle. The goal was to improve data quality through exploration, handling missing values, and exporting a cleaned dataset.
 
 ---
 
 ##  Dataset
-The dataset contains Netflix titles with attributes such as:
-- Title and type (Movie/TV Show)
-- Director and cast
-- Country of production
-- Release year and rating
-- Duration and categories
-
-Initial dataset size:
-- **8807 rows**
-- **12 columns**
+- Source: Kaggle Netflix Dataset  
+- Rows: 8807  
+- Columns: 12  
 
 ---
 
-##  Data Cleaning Process
+##  Data Cleaning Steps
 
 ### 1. Data Exploration
-- Checked dataset shape, data types, and structure
-- Identified missing values and duplicates
+- Checked dataset shape and structure
+- Identified missing values
+- Checked duplicates
 
 ### 2. Handling Missing Values
-- Filled missing **director values** using cast relationships
-- Filled missing **country values** using director-country mapping
-- Replaced remaining missing values with `"Not Given"`
-- Dropped rows with missing:
-  - `date_added`
-  - `rating`
-  - `duration`
+- Filled missing director values using cast relationships
+- Filled missing country values using director mapping
+- Replaced remaining missing values with "Not Given"
 
 ### 3. Feature Engineering
-- Created a `director-cast` relationship column
-- Analyzed frequent director-cast combinations
+- Created director-cast relationship column
+- Analyzed frequent director-cast patterns
 
-### 4. Data Cleaning Actions
-- Removed unnecessary column (`description`)
-- Ensured dataset consistency and completeness
+### 4. Final Cleaning
+- Removed unnecessary column: description
+- Dropped rows with missing date_added, rating, and duration
 
 ---
 
@@ -53,21 +43,16 @@ Initial dataset size:
 - Python
 - Pandas
 - NumPy
-- Kaggle Notebook Environment
+- Kaggle Notebook
 
 ---
 
 ##  Outcome
-- Cleaned and structured dataset ready for analysis
-- Improved data completeness by systematically handling missing values
-- Exported final dataset as `cleaned_netflix.csv`
-
----
-
-##  Output
-Final dataset exported successfully and saved for further analysis or visualization.
+- Clean dataset ready for analysis
+- Improved data consistency
+- Exported as `cleaned_netflix.csv`
 
 ---
 
 ##  Project Link
- [View on Kaggle](kaggle kernels pull k41522476/cynthia-kiptoo-netflix-data-wrangling)
+kaggle kernels pull k41522476/cynthia-kiptoo-netflix-data-wrangling
