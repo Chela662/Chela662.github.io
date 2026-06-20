@@ -55,4 +55,4 @@ This project focuses on cleaning and preparing the Netflix dataset from Kaggle. 
 ---
 
 ##  Project Link
-kaggle kernels pull k41522476/cynthia-kiptoo-netflix-data-wrangling
+(kaggle kernels pull k41522476/cynthia-kiptoo-netflix-data-wrangling)
