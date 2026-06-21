@@ -62,43 +62,6 @@ This project focuses on cleaning and preparing the Netflix dataset from Kaggle. 
 ##  Project Link
 https://www.kaggle.com/code/k41522476/cynthia-kiptoo-netflix-data-wrangling
 
-# Exploratory Data Analysis
-
-###  Overview
-Performed exploratory data analysis on a dataset using Python to uncover patterns, trends, and insights.
-
----
-
-###  Key Steps
-- Loaded and inspected dataset structure  
-- Handled missing values and duplicates  
-- Performed descriptive statistics  
-- Explored relationships between variables  
-- Identified trends and outliers  
-
----
-
-###  Visualizations
-- Used Matplotlib and Seaborn for data visualization  
-- Created charts to understand distributions and relationships  
-
----
-
-###  Tools Used
-- Python  
-- Pandas  
-- Matplotlib  
-- Seaborn  
-- Jupyter Notebook  
-
----
-
-###  Outcome
-Gained insights from raw data and improved understanding of data patterns for decision-making.
-
----
-# Project link
-https://www.kaggle.com/code/k41522476/cynthia-kiptoo-eda
 
 
 
