@@ -61,3 +61,20 @@ This project focuses on cleaning and preparing the Netflix dataset from Kaggle. 
 
 ##  Project Link
 https://www.kaggle.com/code/k41522476/cynthia-kiptoo-netflix-data-wrangling
+
+
+# PROJECT 2
+# Exploratory Data Analysis on the Titanic Dataset
+
+This project involved performing Exploratory Data Analysis (EDA) on the Titanic dataset using Python. The objective was to understand the structure of the data, identify missing values, detect outliers, and uncover patterns that influenced passenger survival.
+
+Using Pandas, NumPy, Matplotlib, and Seaborn, I explored demographic information such as age, gender, passenger class, fare, and embarkation point. Various visualizations, including histograms, box plots, count plots, heatmaps, and scatter plots, were created to reveal relationships between variables and survival outcomes.
+
+Key findings showed that survival rates varied significantly by passenger class, gender, age, and embarkation location. Missing values were identified and analyzed, while fare outliers were handled through percentile capping. The project strengthened my skills in data cleaning, data visualization, statistical analysis, and extracting insights from real-world datasets.
+
+**Tools Used:** Python, Pandas, NumPy, Matplotlib, Seaborn, Kaggle
+
+**Skills Demonstrated:** Data Cleaning, Exploratory Data Analysis (EDA), Data Visualization, Feature Analysis, Outlier Detection, Insight Generation
+
+# Project link
+https://www.kaggle.com/code/k41522476/cynthia-kiptoo-eda
